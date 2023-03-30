@@ -1,0 +1,460 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Dark Blue (intro and email sign up background): hsl(217, 28%, 15%)
+- Dark Blue (main background): hsl(218, 28%, 13%)
+- Dark Blue (footer background): hsl(216, 53%, 9%)
+- Dark Blue (testimonials background): hsl(219, 30%, 18%)
+
+### Accent
+
+- Cyan (inside call-to-action gradient): hsl(176, 68%, 64%)
+- Blue (inside call-to-action gradient): hsl(198, 60%, 50%)
+- Light Red (error): hsl(0, 100%, 63%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 14px
+
+### Headings, Call-to-actions, Header Navigation
+
+- Family: [Raleway](https://fonts.google.com/specimen/Raleway)
+- Weights: 400, 700
+
+font-family: 'Raleway', sans-serif;
+
+### Body
+
+- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- Weights: 400, 700
+
+font-family: 'Open Sans', sans-serif;
+
+## Icons
+
+For the social icons, you can use a font icon library. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com/)
+- [IcoMoon](https://icomoon.io/)
+- [Ionicons](https://ionicons.com/) */
+
+:root{
+    --dark-blue: hsl(217, 28%, 15%);
+    --dark-blue-main: hsl(218, 28%, 13%);
+    --dark-blue-footer: hsl(216, 53%, 9%);
+    --dark-blue-testimonials: hsl(219, 30%, 18%);
+    --cyan-call-to-action: hsl(176, 68%, 64%);
+    --blue-call-to-action: hsl(198, 60%, 50%);
+    --light-red-error: hsl(0, 100%, 63%);
+    --white: hsl(0,0%,100%);
+}
+
+body{
+    background-color: var(--dark-blue);
+}
+
+header{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.5rem 3rem;
+}
+
+.logo{
+    width: 110px;
+}
+
+.header-container nav ul{
+    display: flex;
+    align-items: center;
+}
+
+.header-container nav ul li{
+    list-style: none;
+}
+
+.header-container nav ul li a{
+    text-decoration: none;
+    padding: 0 1.2rem;
+    color: rgba(255, 255, 255, 0.692);
+}
+
+.header-container nav ul li a:hover{
+    text-decoration: underline;
+    color: white;
+    transition: 100ms ease;
+    font-weight: 600;
+}
+
+/* HERO */
+
+.hero-container{
+    text-align: center;
+    color: var(--white);
+}
+
+.desktop-img{
+    margin: 0 auto;
+    width: 650px;
+}
+
+.hero-container h1{
+    margin: 2rem auto;
+    max-width: 520px;
+    font-size: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.hero-container p{
+    margin: 0 auto 3rem auto;
+    max-width: 532px;
+}
+
+.hero-container a{
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+    background: linear-gradient(85deg, rgba(21,171,236,1) 0%, rgba(80,202,255,1) 67%);
+    padding: 1rem 5rem;
+    border-radius: 30px;
+    position: relative;
+    z-index: 999;
+}
+
+.hero-container a:hover{
+    transition: 1s;
+    filter: brightness(200%);
+}
+
+/* MIDDLE */
+
+.middle-container{
+    margin: 7rem 0 0 0;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 5rem;
+    gap: 10rem;
+    max-width: 1440px;
+}
+
+.middle-container img{
+    margin: 0 auto;
+    width: 80px;
+}
+
+.middle-container h2{
+    margin: 2rem 0 1rem 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.middle-container p{
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.hero-background{
+    background: url(/img/bg-curvy-desktop.svg) no-repeat bottom;
+    width: 100%;
+}
+
+
+.background-color{
+    background-color: var(--dark-blue-main);
+    width: 100%;
+    margin-top: -2rem;
+    padding-top: 4rem;
+} 
+
+/* STAY PROD */
+
+section:nth-of-type(3){
+    background-color: var(--dark-blue-main);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.stay-prod-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    color: var(--white);
+    margin-top: 5rem;
+    /* width: 50%; */
+}
+
+.stay-img img{
+    width: 100%;
+}
+
+.stay-content h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5rem;
+    max-width: 400px;
+    line-height: 3rem;
+}
+
+.stay-content p{
+    max-width: 570px;
+    margin-top: 1rem;
+}
+
+.see-how{
+    border-bottom: 1px solid var(--cyan-call-to-action);
+    padding-bottom: 0.3rem;
+    max-width: 180px;
+}
+
+.see-how a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--cyan-call-to-action);
+    margin-top: 1.5rem;
+    gap: 1rem;
+}
+
+.see-how:hover{
+    border-bottom: 1px solid var(--white);
+}
+
+.see-how a:hover{
+    color: var(--white);
+}
+
+/* BOXES */
+
+.quotes{
+    position: absolute;
+    margin: -1rem 0 0 -1.5rem;
+}
+
+.flex-container{
+    background-color: var(--dark-blue-main);
+    display: flex;  
+    color: var(--white);
+    gap: 4rem;
+    margin: 0 auto 0 auto;
+    max-width: 1440px;
+    padding: 6rem 6rem 14rem 6rem;
+}
+
+.box{
+    box-shadow: 9px 10px 5px 0px rgba(24,33,51,0.75);
+    background-color: var(--dark-blue-testimonials);
+    padding: 2rem 2rem 1rem 2rem;
+    /* height: 200px; */
+}
+
+.box img{
+    width: 35px;
+    border-radius: 50%;
+}
+
+.box p{
+    font-size: 0.9rem;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-top: 1.3rem;
+}
+
+.profile h2{
+    font-size: 0.9rem;
+}
+
+.profile p{
+    font-size: 0.8rem;
+}
+
+/* FOOTER */
+
+footer{
+    padding-bottom: 2.5rem;
+    background-color: var(--dark-blue-footer);
+}
+
+.early-access-container{
+    background-color: var(--dark-blue);
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    top: -5rem;
+    margin:  auto;
+    max-width: 840px;
+    padding: 2rem 5rem 3rem 5rem;
+    box-shadow: 6px 6px 5px 0px rgb(26, 26, 26);
+}
+
+.early-access-container h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.access-p{
+    margin-bottom: 1.5rem;
+}
+
+.submit-container{
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.email{
+    border-radius: 25px;
+    border: none;
+    width: 500px;
+    outline: none;
+    padding-left: 1rem;
+}
+
+.error, .sent{
+    display: none;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: var(--light-red-error);
+    margin: 0.5rem 0 0 1rem;
+}
+
+.sent{
+    color: rgb(47, 218, 47);
+}
+
+.sent.active{
+    display: block;
+}
+
+.error.active{
+    display: block;
+}
+
+.email::placeholder{
+    margin-left: 10rem;
+
+}
+
+.submit{
+    color: white;
+    font-weight: 600;
+    background: linear-gradient(85deg, rgba(21,171,236,1) 0%, rgba(80,202,255,1) 67%);
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.submit:hover{
+    transition: 1s;
+    filter: brightness(200%);
+}
+
+
+.footer-container{
+    max-width: 1440px;
+    margin: 2rem auto;
+    padding: 0 3rem;
+}
+
+.footer-nav-container{
+    display: flex;
+    gap: 3rem;
+    margin-top: 4rem;
+    color: white;
+    font-size: 0.9rem;
+    justify-content: space-between;
+}
+
+.location{
+    display: flex;
+    align-items: start;
+}
+
+.location img{
+    margin-right: 1.5rem;
+}
+
+.location p{
+    max-width: 400px;
+}
+
+.call-gmail div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.call-gmail div:nth-child(2){
+    margin-top: 1rem;
+}
+
+.footer-nav-container li{
+    padding: 0.5rem 0;
+    list-style: none;
+}
+
+.footer-nav-container li:first-child{
+    padding: 0 0 0.5rem 0;
+}
+
+.footer-nav-container a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.footer-nav-container a:hover{
+    font-weight: 600;
+}
+
+.footer-nav{
+    display: flex;
+    gap: 4rem;
+}
+
+/* SOCIALS */
+
+.socials-container{
+    display: flex;
+    align-items: start;
+    gap: 1.2rem;
+}
+
+.socials-container img{
+    width: 30px;
+    filter: invert(100%);
+}
